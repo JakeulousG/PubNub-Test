@@ -1,8 +1,15 @@
 (function() {
+    var channel = $("#chat_title").text()
+    console.log(channel)
+    var staff = $("#chat_staff").text()
+    console.log(staff)
+    var user = $("#chat_user").text()
+    console.log(user)
     var pubnub = new PubNub({
         publishKey: 'pub-c-60cd9afe-8af7-459d-9884-50ed1238ea10',
         subscribeKey: 'sub-c-5d8a9e22-b644-11ec-8c3a-fe86d55faee6',
-        uuid: "1234567890qwertyuioplkjhgfdsazxcvbnm"
+        // uuid: "1234567890qwertyuioplkjhgfdsazxcvbnm",
+        secretKey: 'sec-c-NWQxMmM2NzQtNjcwYi00MTQ0LTkwNGItMjg5Nzg0MjllMTY3'
     });
     // generate a random username
     var randomName = function() {
@@ -47,7 +54,7 @@
         if(data.username == me) {
             $line.addClass('me');  
         }
-        
+
         $line.append($message);
         $output.append($line);
         $output.scrollTop($output[0].scrollHeight);

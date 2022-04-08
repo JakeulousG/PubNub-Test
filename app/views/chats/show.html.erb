@@ -1,8 +1,9 @@
-<%= <%= link_to "<- Dashboard", root_path, class:'btn btn-info text-white' %> root_path %>
+<%= link_to "<- Dashboard", root_path, class:'btn btn-info text-white' %>
 <br><br>
 <script src="//cdn.pubnub.com/pubnub.min.js"></script>
-
-
+<div id="chat_title"><%= @chat.chat_title %></div>
+<div id="chat_staff"><%= @staff.name %></div>
+<div id="chat_user"><%= @user.name %></div>
 
 <div class="alert alert-info">You are <strong id="whoami"><%= current_user.name %></strong></div>
 

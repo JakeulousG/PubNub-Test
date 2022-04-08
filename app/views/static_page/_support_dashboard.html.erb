@@ -23,7 +23,7 @@
                     <%= User.where(user_id:chat.user_id).name %>
                 </td>
                 <td>
-                    <%= link_to "chat now", "" %>
+                    <%= link_to "chat now", chat_path(chat) %>
                 </td>
             </tr>
         <% end %>
