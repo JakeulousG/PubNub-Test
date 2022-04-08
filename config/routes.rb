@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'chat/chat_page'
   get 'users/index'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
