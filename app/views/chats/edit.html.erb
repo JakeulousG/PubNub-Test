@@ -1,0 +1,21 @@
+<div class="my-3">
+    <%= link_to "<- Dashboard", root_path, class:'btn btn-info text-white' %>
+</div>
+<div class="card mt-5">
+    <div class="card-header">
+        +&nbsp;Assign staff to chat!
+    </div>
+    <div class="card-body">
+        <div class="row mx-5 px-5">
+            <%= form_for(@chat) do |f| %>
+                <div class="row mb-4">
+                    <%= f.label "Select staff to Assign", class:'form-label' %>
+                    <%= f.select :staff_id, options_from_collection_for_select(@staffs, "id", "name"), include_blank: true %>
+                </div>
+                <div class="row mb-4">
+                    <%= f.submit "Assigned Staff to Chat", class:'btn btn-success'%>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>

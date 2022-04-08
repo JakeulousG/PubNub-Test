@@ -6,6 +6,7 @@ class User < ApplicationRecord
     support: 2,
     admin: 3
   }
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

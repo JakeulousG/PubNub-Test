@@ -3,19 +3,69 @@
 
 <h3>Admin Dashboard:</h3>
 <small>Assign users to specific chat staff:</small>
-
+<hr>
+<% if @unassigned_chat.nil? %>
+    <h3 class="text-center text-primary">No pending Chats...</h3>
+<% else %>
+    <table class='table table-striped table-bordered text-center'>
+        <tr>
+            <td><strong>Chat Title</strong></td>
+            <td><strong>User Name</strong></td>
+            <td><strong>Assigned Staff</strong></td>
+            <td><strong>Action</strong></td>
+        </tr>
+        <% @unassigned_chats.each do |chat| %>
+            <tr>
+                <td>
+                    <%= chat.chat_title %>
+                </td>
+                <td>
+                    <%= User.find(chat.user_id).name %>
+                </td>
+                <td>
+                    <% if chat.staff_id == nil%>
+                        <span class="text-danger">
+                            No Staff Assigned
+                        </span>
+                    <% else %>
+                        <%= User.find(chat.staff_id).name %>
+                    <% end %>
+                </td>
+                <td>
+                    <%= link_to "Assign Staff", edit_chat_path(chat), class: 'btn btn-info text-white'%>
+                </td>
+            </tr>
+        <% end %>
+    </table>
+<% end %>
+<small>All chats with assigned staff:</small>
+<hr>
 <table class='table table-striped table-bordered text-center'>
     <tr>
+        <td><strong>Chat Title</strong></td>
         <td><strong>User Name</strong></td>
+        <td><strong>Assigned Staff</strong></td>
         <td><strong>Action</strong></td>
     </tr>
-    <% User.where("account_types = 1").each do |user| %>
+    <% @assigned_chats.each do |chat| %>
         <tr>
-            <td
-                ><%= user.name %>
+            <td>
+                <%= chat.chat_title %>
             </td>
             <td>
-                <%= link_to "chat now", chat_chat_page_path%>
+                <%= User.find(chat.user_id).name %>
+            </td>
+            <td>
+                <% if chat.staff_id == nil%>
+                    <span class="text-danger">
+                        No Staff Assigned
+                    </span>
+                <% else %>
+                    <%= User.find(chat.staff_id).name %>
+                <% end %>
+            </td>
+            <td>
+                <%= link_to "View Chat", "", class: 'btn btn-success text-white'%>
             </td>
         </tr>
     <% end %>
