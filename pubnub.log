@@ -28,3 +28,56 @@ D, [2022-04-08T10:34:30.585939 #4961] DEBUG -- Pubnub::Telementry: Initialized T
 D, [2022-04-08T10:34:30.586108 #4961] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 5.0.0
 D, [2022-04-08T10:52:21.669222 #6454] DEBUG -- Pubnub::Telementry: Initialized Telemetry
 D, [2022-04-08T10:52:21.669386 #6454] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 5.0.0
+D, [2022-04-08T13:47:17.890532 #7880] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2022-04-08T13:47:17.895327 #7880] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 5.0.0
+D, [2022-04-08T13:47:29.708108 #7901] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2022-04-08T13:47:29.708293 #7901] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 5.0.0
+D, [2022-04-08T13:47:37.065132 #7910] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2022-04-08T13:47:37.065340 #7910] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 5.0.0
+D, [2022-04-08T13:47:37.065937 #7910] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2022-04-08T13:47:37.066083 #7910] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2022-04-08T13:47:37.066140 #7910] DEBUG -- Pubnub::Client: Apply state
+D, [2022-04-08T13:47:37.066200 #7910] DEBUG -- Pubnub::Subscriber: Adding subscription to Subscriber
+D, [2022-04-08T13:47:37.066244 #7910] DEBUG -- Pubnub::Subscriber: Added subscription to Subscriber
+D, [2022-04-08T13:47:37.066479 #7910] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2022-04-08T13:47:37.066619 #7910] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2022-04-08T13:47:37.066741 #7910] DEBUG -- Pubnub::Client: Apply state
+D, [2022-04-08T13:47:37.066855 #7910] DEBUG -- Pubnub::Subscriber: Starting subscription
+D, [2022-04-08T13:47:37.071055 #7910] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2022-04-08T13:47:37.071335 #7910] DEBUG -- Pubnub: #send_request start
+D, [2022-04-08T13:47:37.071390 #7910] DEBUG -- Pubnub: #request_dispatcher
+D, [2022-04-08T13:47:37.071442 #7910] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2022-04-08T13:47:37.072344 #7910] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/v2/subscribe/sub-c-5d8a9e22-b644-11ec-8c3a-fe86d55faee6/my_channel,my_channel-pnpres/0?pnsdk=PubNub-Ruby%2F5.0.0&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=myUniqueUUID
+D, [2022-04-08T13:47:37.071186 #7910] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2022-04-08T13:47:37.074617 #7910] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish
+D, [2022-04-08T13:47:37.079746 #7910] DEBUG -- Pubnub::Publish: Fired event Pubnub::Publish
+D, [2022-04-08T13:47:37.079893 #7910] DEBUG -- Pubnub::Event: #send_request called
+D, [2022-04-08T13:47:37.079987 #7910] DEBUG -- Pubnub::SingleEvent: #request_dispatcher called
+D, [2022-04-08T13:47:37.080046 #7910] DEBUG -- Pubnub::Client: Looking for requester for async single_event
+D, [2022-04-08T13:47:37.080307 #7910] DEBUG -- Pubnub::Event: #send_request got sender
+D, [2022-04-08T13:47:37.080612 #7910] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/publish/pub-c-60cd9afe-8af7-459d-9884-50ed1238ea10/sub-c-5d8a9e22-b644-11ec-8c3a-fe86d55faee6/0/my_channel/0/%7B%22text%22%3A%22Hello%20world%22%7D?ortt=%7B%22t%22%3A16493968570747058%7D&pnsdk=PubNub-Ruby%2F5.0.0&seqn=1&uuid=myUniqueUUID
+D, [2022-04-08T13:47:38.935598 #7910] DEBUG -- Pubnub: Fire before fire_callback
+D, [2022-04-08T13:47:38.936717 #7910] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/v2/subscribe/sub-c-5d8a9e22-b644-11ec-8c3a-fe86d55faee6/my_channel,my_channel-pnpres/0?pnsdk=PubNub-Ruby%2F5.0.0&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=myUniqueUUID
+D, [2022-04-08T13:47:38.936145 #7910] DEBUG -- Pubnub::Event: Event#handle
+D, [2022-04-08T13:47:38.937409 #7910] DEBUG -- Pubnub::Event: Firing callbacks for Pubnub::Publish
+D, [2022-04-08T13:47:38.937178 #7910] DEBUG -- Pubnub::Event: Event#handle
+D, [2022-04-08T13:47:38.937852 #7910] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+E, [2022-04-08T13:47:38.942442 #7910] ERROR -- Pubnub::SubscribeEvent::Formatter: Invalid formatted envelope.
+D, [2022-04-08T13:51:38.259484 #7988] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2022-04-08T13:51:38.259753 #7988] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 5.0.0
+D, [2022-04-08T13:51:38.260349 #7988] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2022-04-08T13:51:38.260509 #7988] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2022-04-08T13:51:38.260602 #7988] DEBUG -- Pubnub::Client: Apply state
+D, [2022-04-08T13:51:38.260664 #7988] DEBUG -- Pubnub::Subscriber: Adding subscription to Subscriber
+D, [2022-04-08T13:51:38.260708 #7988] DEBUG -- Pubnub::Subscriber: Added subscription to Subscriber
+D, [2022-04-08T13:51:38.260936 #7988] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2022-04-08T13:51:38.261038 #7988] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2022-04-08T13:51:38.261076 #7988] DEBUG -- Pubnub::Client: Apply state
+D, [2022-04-08T13:51:38.261130 #7988] DEBUG -- Pubnub::Subscriber: Starting subscription
+D, [2022-04-08T13:51:38.261503 #7988] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2022-04-08T13:51:38.261629 #7988] DEBUG -- Pubnub::Telemetry: Fetching telemetry for l_pub
+D, [2022-04-08T13:51:38.261565 #7988] DEBUG -- Pubnub: #send_request start
+D, [2022-04-08T13:51:38.261844 #7988] DEBUG -- Pubnub: #request_dispatcher
+D, [2022-04-08T13:51:38.261894 #7988] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2022-04-08T13:51:38.265040 #7988] DEBUG -- Pubnub::Event: Requested URI: http://ps.pndsn.com/v2/subscribe/pub-c-60cd9afe-8af7-459d-9884-50ed1238ea10/my_channel,my_channel-pnpres/0?pnsdk=PubNub-Ruby%2F5.0.0&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=myUniqueUUID
+D, [2022-04-08T13:51:38.261781 #7988] DEBUG -- Pubnub::Event: Initialized Pubnub::Publish

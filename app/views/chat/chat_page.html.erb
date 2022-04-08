@@ -1,7 +1,25 @@
-Enter Chat and press enter
-<div><input id=input placeholder="message" /></div>
+<%= link_to "<- Dashboard", root_path %>
+<br><br>
+<script src="//cdn.pubnub.com/pubnub.min.js"></script>
 
-Chat Output
-<div id=box></div>
+
+
+<div class="alert alert-info">You are <strong id="whoami"><%= current_user.name %></strong></div>
+
+<div class="card">
+  <div class="card-header">Live Chat</div>
+  <ul class="list-group" id="chat-output"></ul>
+  <div class="card-body">
+    
+  </div>
+  <div class="card-footer">
+    <form id="chat">
+      <div class="input-group">
+        <input type="text" class="form-control" id="chat-input" />
+        <button type="submit" class="btn btn-success">Send Message</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <%= javascript_pack_tag 'pubnub'%>

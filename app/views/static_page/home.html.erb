@@ -1,7 +1,6 @@
 <% if user_signed_in? %>
     <h5 style="text-align: center;">Welcome, <%= current_user.name %>!</h5>
     <%= link_to "Edit User", edit_user_registration_path %>
-    <h3>View Chats:</h3>
     <% if current_user.account_types == "admin" %>
         <%= render "/static_page/admin_dashboard" %>
     <% elsif current_user.account_types == "suppoert" %>
