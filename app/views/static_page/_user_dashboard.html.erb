@@ -1,2 +1,24 @@
 <h3>User Dashboard:</h3>
+<div class="d-flex justify-content-end">
+    <%= link_to "+ create new chat", new_chat_path, class:'btn btn-success' %>
+</div>
+<br><br>
 <small>View Chats with staff:</small>
+
+
+<table class='table table-striped table-bordered text-center'>
+    <tr>
+        <td><strong>Chat Title</strong></td>
+        <td><strong>Action</strong></td>
+    </tr>
+    <% @chats.each do |chat| %>
+        <tr>
+            <td>
+            <%= chat.chat_title %>
+            </td>
+            <td>
+                <%= link_to "chat now", "" %>
+            </td>
+        </tr>
+    <% end %>
+</table>
