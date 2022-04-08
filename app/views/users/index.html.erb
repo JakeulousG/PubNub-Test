@@ -1,0 +1,18 @@
+<h2 style='text-align: center;'>All Users</h2>
+<%= link_to "<- Dashboard", root_path%>
+<table style='border: 2px solid black; text-align: center;'>
+    <tr>
+        <td style="border: 1px solid black; width: 150px;"><strong>User Name</strong></td>
+        <td style="border: 1px solid black; width: 150px;">Action</td>
+    </tr>
+    <% User.all.each do |user| %>
+    <tr>
+        <td style="border: 1px solid black; width: 150px;"><%= user.name %></td>
+        <td style="border: 1px solid black; width: 150px;">
+            <% if current_user.id != user.id %>
+                <%= link_to "Delete", cancel_user_registration_path(user.id) %>
+            <% end %>
+        </td>
+    </tr>
+    <% end %>
+</table>

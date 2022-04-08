@@ -1,2 +1,20 @@
-<h1>StaticPage#home</h1>
-<p>Find me in app/views/static_page/home.html.erb</p>
+<% if user_signed_in? %>
+    <h5 style="text-align: center;">Welcome, <%= current_user.name %>!</h5>
+    <%= link_to "Edit User", edit_user_registration_path %>
+    <h3>View Chats:</h3>
+    <% if current_user.account_types == "admin" %>
+        <%= render "/static_page/admin_dashboard" %>
+    <% elsif current_user.account_types == "suppoert" %>
+        <%= render "/static_page/support_dashboard" %>
+    <% elsif current_user.account_types == "user" %>
+        <%= render "/static_page/user_dashboard" %>
+    <% end %>
+<% else %>
+    <div  style="text-align: center;">
+        <h2>Welcome to Sup<strike>Hub</strike></h2>
+        <br>
+        <%= link_to "Register Account",new_user_registration_path %>
+        <br><br>
+        <%= link_to "Login Existing Account", new_user_session_path %>
+    </div>
+<% end %>

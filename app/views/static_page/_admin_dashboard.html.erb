@@ -1,0 +1,22 @@
+<%= link_to "View all USERS", users_path %>
+
+
+<h3>Admin Dashboard:</h3>
+<small>Assign users to specific chat staff:</small>
+
+<table style='border: 2px solid black; text-align:center; margin: 25px;'>
+    <tr>
+        <td style="border: 1px solid black; width: 150px;" >User Name</td>
+        <td style="border: 1px solid black; width: 150px;" >Action</td>
+    </tr>
+    <% User.where("account_types = 1").each do |user| %>
+        <tr>
+            <td style="border: 1px solid black; width: 150px;"
+                ><%= user.name %>
+            </td>
+            <td style="border: 1px solid black; width: 150px;">
+                Set Support Staff
+            </td>
+        </tr>
+    <% end %>
+</table>
