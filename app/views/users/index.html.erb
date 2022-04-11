@@ -1,16 +1,16 @@
 <h2 style='text-align: center;'>All Users</h2>
-<%= <%= link_to "<- Dashboard", root_path, class:'btn btn-info text-white' %> root_path%>
-<table style='border: 2px solid black; text-align: center;'>
-    <tr>
-        <td style="border: 1px solid black; width: 150px;"><strong>User Name</strong></td>
-        <td style="border: 1px solid black; width: 150px;">Action</td>
+<%= link_to "<- Dashboard", root_path, class:'btn btn-info text-white'%>
+<table class='table table-bordered table-striped text-center my-5'>
+    <tr class='bg-dark text-white'>
+        <td><strong>User Name</strong></td>
+        <td>Action</td>
     </tr>
     <% User.all.each do |user| %>
     <tr>
-        <td style="border: 1px solid black; width: 150px;"><%= user.name %></td>
-        <td style="border: 1px solid black; width: 150px;">
+        <td><%= user.name %></td>
+        <td>
             <% if current_user.id != user.id %>
-                <%= link_to "Delete", cancel_user_registration_path(user.id) %>
+                <%= link_to "Delete", cancel_user_registration_path(user.id), class:'btn btn-danger text-white' %>
             <% end %>
         </td>
     </tr>

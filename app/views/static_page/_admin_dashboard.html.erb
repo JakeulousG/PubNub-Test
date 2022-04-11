@@ -1,7 +1,7 @@
-<%= link_to "View all USERS", users_path %>
-
-
-<h3>Admin Dashboard:</h3>
+<div class="d-flex justify-content-between">
+    <h3>Admin Dashboard:</h3>
+    <%= link_to "View all USERS", users_path, class:'btn btn-info text-white' %>
+</div>
 <small>Assign users to specific chat staff:</small>
 <hr>
 <% if @unassigned_chat.nil? %>
@@ -65,7 +65,7 @@
                 <% end %>
             </td>
             <td>
-                <%= link_to "View Chat", "", class: 'btn btn-success text-white'%>
+                <%= link_to "View Chat", chat_path(chat), class: 'btn btn-success text-white'%>
             </td>
         </tr>
     <% end %>
