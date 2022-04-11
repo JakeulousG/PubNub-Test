@@ -92,7 +92,21 @@ var App = function() {
     auth_key: me.uuid,
     ssl: true
   });
-  
+  pubnub.history({
+    channel: channel,
+    includeUUID: true,
+    includeMessageActions: true,
+    callback: function(data){
+      $data = data[0];
+      $.each($data, function(index, item){
+      var $line = $('<li class="list-group-item"><strong>' + item.payload.uuid + ':</strong> </span>');
+      var $message = $('<span class="text" />').text(item.payload.text).html();
+      $line.append($message)
+      $('#chat-output').append($line);
+      });
+    }
+  });
+
   pubnub.grant({
     channel: channel,
     auth_key: me.uuid,
