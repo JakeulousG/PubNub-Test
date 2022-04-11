@@ -1,26 +1,38 @@
 <%= link_to "<- Dashboard", root_path, class:'btn btn-info text-white' %>
 <br><br>
 <script src="//cdn.pubnub.com/pubnub.min.js"></script>
-<div id="chat_title"><%= @chat.chat_title %></div>
-<div id="chat_staff"><%= @staff.name %></div>
-<div id="chat_user"><%= @user.name %></div>
+<div id="chat_title" style='display: none;'><%= @chat.chat_title %></div>
+<div id="chat_staff" style='display: none;'><%= @staff.name %></div>
+<div id="chat_user" style='display: none;'><%= @user.name %></div>
+<div id="current_user" style='display: none;'><%= current_user.name %></div>
 
-<div class="alert alert-info">You are <strong id="whoami"><%= current_user.name %></strong></div>
-
-<div class="card">
-  <div class="card-header">Live Chat</div>
-  <ul class="list-group" id="chat-output"></ul>
-  <div class="card-body">
-    
-  </div>
-  <div class="card-footer">
-    <form id="chat">
-      <div class="input-group">
-        <input type="text" class="form-control" id="chat-input" />
-        <button type="submit" class="btn btn-success">Send Message</button>
+<div class="alert alert-info">You are <strong id="whoami"></strong></div>
+<div class="row">
+  <div class="col-3">
+    <div class="card">
+      <div class="card-header">Online Users</div>
+      <div class="card-body">
+        <div class="list-group" id="online-users"></div>
       </div>
-    </form>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="card">
+      <div class="card-header">Live Chat</div>
+        <ul class="list-group" id="chat-output"></ul>
+      <div class="card-body">
+      </div>
+      <div class="card-footer">
+        <form id="chat">
+          <div class="input-group">
+            <input type="text" class="form-control" id="chat-input" />
+            <button type="submit" class="btn btn-success">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <%= javascript_pack_tag 'pubnub'%>
